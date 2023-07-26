@@ -22,6 +22,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         auth = Firebase.auth
+
+        // Account Remember
+        val currentUser = auth.currentUser
+        if (currentUser != null){
+            val intent = Intent(this@MainActivity,FeedActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
 
     fun signInClicked(view : View){
