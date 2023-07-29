@@ -1,4 +1,4 @@
-package com.kemalgeylani.kotlininstagram
+package com.kemalgeylani.kotlininstagram.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         else{
             auth.signInWithEmailAndPassword(email,password).addOnSuccessListener {
                 //success
-                val intent = Intent(this@MainActivity,FeedActivity::class.java)
+                val intent = Intent(this@MainActivity, FeedActivity::class.java)
                 startActivity(intent)
             }.addOnFailureListener {
                 Toast.makeText(this@MainActivity,it.localizedMessage,Toast.LENGTH_LONG).show()
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 
             auth.createUserWithEmailAndPassword(email,password).addOnSuccessListener {
                 //success
-                val intent = Intent(this@MainActivity,FeedActivity::class.java)
+                val intent = Intent(this@MainActivity, FeedActivity::class.java)
                 startActivity(intent)
                 finish()
 

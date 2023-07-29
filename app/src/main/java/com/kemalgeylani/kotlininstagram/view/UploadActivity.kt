@@ -1,21 +1,16 @@
-package com.kemalgeylani.kotlininstagram
+package com.kemalgeylani.kotlininstagram.view
 
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.content.pm.VersionedPackage
-import android.graphics.Bitmap
-import android.graphics.ImageDecoder
 import android.net.Uri
 import android.os.Build
-import android.os.Build.VERSION
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -26,12 +21,9 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.ktx.app
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.ktx.storage
 import com.kemalgeylani.kotlininstagram.databinding.ActivityUploadBinding
-import kotlinx.coroutines.selects.select
-import java.io.IOException
 import java.util.UUID
 
 class UploadActivity : AppCompatActivity() {
@@ -58,6 +50,8 @@ class UploadActivity : AppCompatActivity() {
 
     }
 
+
+
     fun upload(view: View){
 
         // uniqne universal id
@@ -78,7 +72,7 @@ class UploadActivity : AppCompatActivity() {
 
                         val postMap = hashMapOf<String,Any>()
                         postMap.put("downloadUrl",downloadUrl)
-                        postMap.put("userEmail",auth.currentUser!!.email!!)
+                        postMap.put("userMail",auth.currentUser!!.email!!)
                         postMap.put("comment",binding.commentText.text.toString())
                         postMap.put("date",Timestamp.now())
 
