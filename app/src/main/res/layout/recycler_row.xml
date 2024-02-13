@@ -4,45 +4,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:layout_margin="5dp"
+    android:layout_margin="10dp"
     android:gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_oval">
 
     <TextView
-        android:textColor="#FF9800"
-        android:textStyle="bold"
-        android:textSize="24sp"
-        android:gravity="center"
+        android:id="@+id/recyclerViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
-        android:id="@+id/recyclerViewEmail"
-        android:layout_width="250dp"
-        android:layout_height="30dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="179dp"
-        tools:layout_editor_absoluteY="51dp" />
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:gravity="center" />
 
     <ImageView
-        android:layout_margin="5dp"
         android:id="@+id/recyclerViewImageView"
         android:layout_width="350dp"
         android:layout_height="220dp"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="117dp" />
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:scaleType="centerCrop"/>
 
     <TextView
-        android:textColor="#673AB7"
-        android:textStyle="italic"
-        android:textSize="24sp"
-        android:gravity="center"
+        android:id="@+id/recyclerViewComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"
-        android:id="@+id/recyclerViewComment"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="293dp" />
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:textSize="24sp"
+        android:gravity="center" />
+
 </LinearLayout>

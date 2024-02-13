@@ -5,16 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".view.MainActivity">
 
     <EditText
     android:id="@+id/emailText"
     android:layout_width="300dp"
-    android:layout_height="wrap_content"
+    android:layout_height="50dp"
     android:layout_marginTop="30dp"
     android:ems="10"
+    android:textAlignment="center"
     android:hint="Enter Email"
     android:inputType="text"
+    android:background="@drawable/oval_gradient_background"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
@@ -22,11 +25,13 @@
     <EditText
         android:id="@+id/passwordText"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Enter Password"
         android:inputType="text"
+        android:textAlignment="center"
+        android:background="@drawable/oval_gradient_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailText" />
@@ -38,6 +43,7 @@
         android:layout_marginTop="30dp"
         android:onClick="signInClicked"
         android:text="SIGN IN"
+        android:background="@drawable/button_gradient_background"
         app:layout_constraintStart_toStartOf="@+id/passwordText"
         app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
@@ -48,6 +54,7 @@
         android:layout_marginTop="30dp"
         android:onClick="signUpClicked"
         android:text="SIGN UP"
+        android:background="@drawable/button_gradient_background"
         app:layout_constraintEnd_toEndOf="@+id/passwordText"
         app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
